@@ -8,6 +8,7 @@ function App() {
 
       <Header name="shah"></Header>
       <Blogs></Blogs>
+
     </>
   );
 }
