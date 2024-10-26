@@ -10,7 +10,7 @@ const Blogs = () => {
   },[])
   
   return (
-    <div>
+    <div className="w-2/3">
       <h2>Total Blogs {blogs.length}</h2>
       {
         blogs.map(blog=><Blog blog={blog} key={blog.id}></Blog>)
