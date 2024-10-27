@@ -3,19 +3,18 @@
 //
 // Example: Conditional Logic
 
-
-
 const readingTime = 10; // Example reading time
 const bookMarks = [
   { title: "JavaScript Basics" },
   { title: "React Hooks" },
-  { title: "Node.js Guide" }
+  { title: "Node.js Guide" },
 ]; // Example bookmarks array
 
 // Ternary operator: Checking if bookmarks exist
-const bookmarksOutput = bookMarks && bookMarks.length > 0
-  ? bookMarks.map((bookmark) => `Title: ${bookmark.title}`).join('\n')
-  : "No bookmarks available.";
+const bookmarksOutput =
+  bookMarks && bookMarks.length > 0
+    ? bookMarks.map((bookmark) => `Title: ${bookmark.title}`).join("\n")
+    : "No bookmarks available.";
 
 console.log(`Total read time: ${readingTime}`);
 console.log(bookmarksOutput);
