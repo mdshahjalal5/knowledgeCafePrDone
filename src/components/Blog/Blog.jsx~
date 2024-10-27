@@ -1,5 +1,6 @@
 import { FaBookmark } from "react-icons/fa";
 export default function Blog({ blog,addBookMarks }) {
+  // console.log(blog);
   const {
     cover,
     hashtags,
@@ -24,6 +25,7 @@ export default function Blog({ blog,addBookMarks }) {
           <span>{reading_time} min read </span>
           <button onClick={()=>addBookMarks(blog)} className="ml-2 text-2xl">
             <FaBookmark/>
+
           </button>
         </div>
       </div>
