@@ -1,33 +1,18 @@
-# Conditional Rendering in Vanilla JavaScript
+// Conditional Rendering in Vanilla JavaScript (Logic Only)
+// Here’s a collection of conditional rendering techniques in JavaScript:
+//
+// Example: Conditional Logic
 
-This project demonstrates various **conditional rendering techniques** using **vanilla JavaScript**, mimicking common practices from React.
 
-## **Techniques Used:**
 
-1. **Ternary Operator:**
-   - Checks if bookmarks exist and maps them into a string or shows a default message.
-
-2. **If-Else Statement:**
-   - Handles rendering logic based on whether bookmarks are available.
-
-3. **Logical AND (`&&`) Operator:**
-   - Prints additional information if a condition is met.
-
-4. **Logical OR (`||`) Operator:**
-   - Provides a default message when no bookmarks are found.
-
-5. **Switch-Case Statement:**
-   - Displays messages based on different reading times.
-
-## **Code Example:**
-```javascript
-const readingTime = 10;
+const readingTime = 10; // Example reading time
 const bookMarks = [
   { title: "JavaScript Basics" },
   { title: "React Hooks" },
   { title: "Node.js Guide" }
-];
+]; // Example bookmarks array
 
+// Ternary operator: Checking if bookmarks exist
 const bookmarksOutput = bookMarks && bookMarks.length > 0
   ? bookMarks.map((bookmark) => `Title: ${bookmark.title}`).join('\n')
   : "No bookmarks available.";
@@ -35,6 +20,7 @@ const bookmarksOutput = bookMarks && bookMarks.length > 0
 console.log(`Total read time: ${readingTime}`);
 console.log(bookmarksOutput);
 
+// Using if-else statement
 if (bookMarks && bookMarks.length) {
   console.log("Bookmarks available:");
   bookMarks.forEach((bookmark) => console.log(`- ${bookmark.title}`));
@@ -42,10 +28,14 @@ if (bookMarks && bookMarks.length) {
   console.log("No bookmarks available.");
 }
 
+// Using logical AND (&&) operator for concise rendering
 bookMarks.length && console.log(`You have ${bookMarks.length} bookmarks.`);
+
+// Using logical OR (||) operator to provide default output
 const message = bookMarks.length || "No bookmarks found.";
 console.log(message);
 
+// Switch-case example for different reading times
 switch (true) {
   case readingTime > 30:
     console.log("Long read ahead!");
@@ -56,4 +46,3 @@ switch (true) {
   default:
     console.log("Quick read.");
 }
-
